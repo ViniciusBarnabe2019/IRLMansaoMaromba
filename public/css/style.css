@@ -1,0 +1,329 @@
+*, main, header, section, footer, div, h1, h2, ul, a, .div_menu_horizontal, .list_menu_horizontal, .div_participacao {
+    margin: 0px;
+    padding: 0px;
+}
+
+main {
+    position: absolute;
+    width: 100%;
+    height: 100vh;
+    background-color: rgb(83, 83, 83);
+}
+
+header {
+    position: relative;
+    width: 100%;
+    height: auto;    
+    box-shadow: 0px 10px 12px black;
+    z-index: 2;
+}
+
+/* Menu Horizontal */
+.div_menu_horizontal{
+    position: relative;
+    width: 100%;
+    height: 100%;
+    background-color: #9145ff;    
+    display: flex;
+    flex-direction: row;
+}
+
+.div_menu_horizontal .img_logo {
+    height: 100px;
+    width: 110px;
+}
+
+.div_menu_horizontal a {
+    text-decoration: none;
+}
+
+.list_menu_horizontal {
+    position: relative;
+    flex: 1;
+    list-style-type: none;    
+    margin-left: 15px;
+}
+
+.list_menu_horizontal li {   
+    cursor: pointer;
+    display: inline-block;
+    padding: 10px 12px;
+    font-weight: 200;
+    margin-top: 28px;  
+    font-family: 'Lexend', sans-serif;
+    color: #fff;
+}
+
+    .list_menu_horizontal li a {
+        text-decoration: none;
+        color: #fff;
+    }
+
+    .list_menu_horizontal a li:hover {
+        color: black;
+    }
+
+    .item_1, .item_2, .item_3{     
+        font-size: 17px;  
+        border-right: 1px solid black; 
+    }
+
+    .item_3 {
+        border: none;
+    }
+
+.dropdown_menu_horizontal, .dropdown_menu_horizontal_mobile {
+    margin: 30px;
+    z-index: 1;
+}
+
+.dropdown_menu_horizontal_mobile {
+    position: relative;
+    height: 100%;
+    flex: 1;
+    text-align: right;
+}
+
+.btn_menu_horizontal {
+    border: none !important; 
+    color: black !important; 
+    background-color: #fff !important;
+}
+
+.btn_menu_horizontal:focus {
+    box-shadow: none !important;
+    outline: none !important;
+}
+
+.item1_drop:hover, .item2_drop:hover, .item3_drop:hover, .item4_drop:hover{
+    background-color: #9145ff !important;
+    color: #fff;
+}
+
+/* Fim Menu Horizontal */
+
+.section_banner {
+    position: relative;
+    width: 100%;
+    height: auto;    
+    background-color: #9145ff;
+}
+
+/* Participação */
+.card img {
+    height: 360px;  /* Ajuste a altura desejada aqui */
+    object-fit: cover;  /* Isso ajudará a manter o aspecto da imagem */
+}
+
+.div_title, .div_regras {
+    position: relative;
+    width: 100%;
+    height: auto;
+    background-color: #9145ff;
+    box-shadow: 0px 6px 12px black;
+    z-index: 3;
+}
+
+.title_participacao, .title_regras {
+    position: relative;
+    background-color: #9145ff;
+    text-align: center;
+    font-family: 'Lexend', sans-serif;
+    font-weight: 600;
+    padding: 15px 0px;
+    width: 100%;
+    color: #fff;
+}
+
+.div_participacao{
+    position: relative;
+    width: 100%;
+    padding: 35px;
+    height: auto;
+    background-color: #fff;
+}
+
+
+.btn_enviar {
+    border-color: #9145ff !important; 
+    background-color: #9145ff !important; 
+    color: #fff !important;
+}
+
+input[type="text"]:focus, input[type="email"]:focus, select:focus, .btn_enviar:focus, input[type="radio"]:focus{
+    border-color: #9145ff !important; 
+    box-shadow: 0 0 0 0.2rem #9145ff !important; 
+}
+
+input[type="radio"]:checked {
+    background-color: #9145ff !important; 
+}
+
+input[type="radio"]:checked:after {
+    background-color: #9145ff !important; 
+}
+
+.btn_enviar {
+    width: 300px;
+}
+/* Fim Participação */
+
+/* Carrosel */
+.carousel-item {
+    object-fit: cover;
+}
+/* Fim Carrosel */
+
+/* Rodapé */
+
+footer {
+	position: relative;
+	width: 100%;
+	height: auto;
+	bottom: 0px;
+	background-color: #c09af5;
+	color: black;
+	font-family: 'Lexend', sans-serif;
+}
+
+footer ul {
+	margin-top: 5px;
+	list-style-type: none;
+}
+
+footer ul li {
+	padding: 5px 0px;
+    cursor: pointer;
+}
+
+footer ul li i {
+	color: black;
+}
+
+.foot_servicos ul li a {
+    text-decoration: none;
+    color: black;
+}
+
+footer h2 {
+	color: black;
+	font-family: 'Lexend', sans-serif;
+	font-weight: 600;
+}
+
+.foot_redes, .foot_servicos, .foot_sobre {
+	margin: 0px;
+}
+
+.foot_sobre div {
+	position: relative;
+	display: flex;
+	flex-direction: column;
+	margin: 0px;
+	padding: 0px;
+	height: auto;
+	text-align: center;
+}
+
+.foot_sobre div p {
+	width: 100%;
+	color: black;
+}
+
+.foot_redes a {
+	cursor: pointer;
+	text-decoration: none;
+	color: black;
+}
+
+.foot_sobre div a {
+	cursor: pointer;
+	text-decoration: underline;
+	color: black;
+}
+
+/* Fim Rodapé */
+
+/* Menu Horizontal Responsivo */
+@media screen and (max-width: 725px) {
+    .dropdown_menu_horizontal_mobile {
+        display: block;
+    }
+
+    .dropdown_menu_horizontal, .list_menu_horizontal {
+        display: none;
+    }
+
+    .carousel-item img {
+        height: 650px;
+        object-fit: cover;
+    }
+
+    .btn_enviar {
+        width: 100%;
+    }
+
+    footer {
+        display: inline-block;
+      }
+  
+      .foot_redes, .foot_servicos, .foot_sobre {
+        width: 100%;
+        text-align: center;
+        padding-top: 15px;
+      }
+  
+      .foot_sobre {
+           padding-bottom: 15px;
+      }
+  
+      .foot_sobre div {
+          margin: 0 auto;
+          width: 85%;
+          justify-content: center;
+          align-items: center;
+      }
+}
+
+@media screen and (min-width: 726px) {
+    .dropdown_menu_horizontal_mobile {
+        display: none;
+    }
+
+   .dropdown_menu_horizontal, .list_menu_horizontal {
+        display: block;
+    }
+
+    .carousel-item img {
+        height: 950px;
+        object-fit: cover;
+    }
+
+    footer {
+        display: flex;
+        justify-content: space-between;
+      }
+  
+      .foot_redes, .foot_servicos, .foot_sobre {
+        width: auto;
+        padding: 25px;
+      }
+  
+      .foot_redes {
+          justify-self: flex-start;
+      }
+  
+      .foot_servicos {
+          justify-self: center;
+      }
+  
+      .foot_sobre {
+          justify-self: flex-end;
+          width: 40%;
+      }
+  
+      .foot_sobre div {
+          margin: 0 auto;
+          width: 85%;
+      }
+}
