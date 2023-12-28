@@ -144,15 +144,23 @@ header {
 }
 
 
-.btn_enviar {
+.btn_enviar, .btn_suporte {
     border-color: #9145ff !important; 
     background-color: #9145ff !important; 
     color: #fff !important;
 }
 
-input[type="text"]:focus, input[type="email"]:focus, select:focus, .btn_enviar:focus, input[type="radio"]:focus{
+input[type="text"]:focus, input[type="email"]:focus, select:focus, .btn_suporte:focus .btn_enviar:focus, input[type="radio"]:focus, .custom-textarea:focus{
     border-color: #9145ff !important; 
     box-shadow: 0 0 0 0.2rem #9145ff !important; 
+}
+
+.btn_enviar:active,
+.btn_enviar:focus,
+.btn_suporte:active,
+.btn_suporte:focus {
+    border-color: #9145ff !important; 
+    box-shadow: 0 0 0 0.2rem #6f1ce2 !important; 
 }
 
 input[type="radio"]:checked {
@@ -167,6 +175,16 @@ input[type="radio"]:checked:after {
     width: 300px;
 }
 /* Fim Participação */
+
+/* Modals */
+#modalSuporte .btn {
+    float: right;
+}
+
+.btn_suporte {
+    margin-left: 15px;
+}
+/* Fim Modals */
 
 /* Carrosel */
 .carousel-item {

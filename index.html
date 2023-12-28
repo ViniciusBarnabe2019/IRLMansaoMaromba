@@ -12,6 +12,41 @@
     <link rel="stylesheet" type="text/css" href="css/style.css">
 </head>
 <body>
+  
+  <!-- Modal Suporte  -->
+  <div class="modal fade" id="modalSuporte" tabindex="-1" aria-labelledby="exampleModalLabel" aria-hidden="true">
+    <div class="modal-dialog">
+      <div class="modal-content">
+        <div class="modal-header">
+          <h5 class="modal-title" id="exampleModalLabel">Fale com nosso Suporte</h5>
+          <button type="button" class="btn-close" data-bs-dismiss="modal" aria-label="Close"></button>
+        </div>
+        <div class="modal-body">
+          <form>
+            <div class="mb-3">
+              <label for="exampleFormControlInput1" class="form-label">Email</label>
+              <input type="email" class="form-control" id="exampleFormControlInput1" placeholder="email@exemplo.com" required>
+            </div>
+            <div class="mb-3">
+            <label for="lista_opcoes" class="form-label">Assunto</label>
+              <select class="form-select" id="lista_opcoes" aria-label="Default select example" required>
+                <option selected>Do que se trata:</option>
+                <option value="1">Problema Técnico</option>
+                <option value="2">Cancelar Inscrição</option>
+                <option value="3">Outros</option>
+              </select> 
+            </div>
+            <div class="mb-3">
+              <label for="exampleFormControlTextarea1" class="form-label">Descreva o que você precisa</label>
+              <textarea class="form-control custom-textarea" id="exampleFormControlTextarea1" rows="3" required></textarea>
+            </div>
+            <button type="submit" class="btn btn-primary btn_suporte justify-content-end">Enviar</button>
+            <button type="button" class="btn btn-secondary justify-content-end" data-bs-dismiss="modal">Cancelar</button>
+          </form>
+        </div>        
+      </div>
+    </div>
+  </div>
 
   <!-- Modal Políticas -->
   <div class="modal fade" id="modalPoliticas" data-bs-backdrop="static" data-bs-keyboard="false" tabindex="-1" aria-labelledby="staticBackdropLabel" aria-hidden="true">
@@ -61,9 +96,9 @@
                         Como podemos ajudar?
                     </button>
                     <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                        <li><a class="dropdown-item item1_drop" href="#divParticipacao"><i class="fa fa-user" aria-hidden="true"></i> Participar dos IRL's </a></li>
-                        <li><a class="dropdown-item item2_drop" href="#"><i class="fa fa-comments" aria-hidden="true"></i> Falar com Suporte </a></li>
-                        <li><a class="dropdown-item item3_drop" href="#divRegras"><i class="fa fa-book" aria-hidden="true"></i> Ler Nossa Regras </a></li>
+                        <li><a class="dropdown-item item1_drop" href="#titleParticipacao"><i class="fa fa-user" aria-hidden="true"></i> Participar dos IRL's </a></li>
+                        <li><a class="dropdown-item item2_drop" href="#" data-bs-toggle="modal" data-bs-target="#modalSuporte"><i class="fa fa-comments" aria-hidden="true"></i> Falar com Suporte </a></li>
+                        <li><a class="dropdown-item item3_drop" href="#titleRegras"><i class="fa fa-book" aria-hidden="true"></i> Ler Nossa Regras </a></li>
                         <li><hr class="dropdown-divider"></li>
                         <li><a class="dropdown-item item4_drop" data-bs-toggle="modal" data-bs-target="#modalPoliticas" href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Política de Privacidade </a></li>
                     </ul>
@@ -75,9 +110,9 @@
                             Como podemos ajudar?
                         </button>
                         <ul class="dropdown-menu" aria-labelledby="dropdownMenuButton1">
-                            <li><a class="dropdown-item item1_drop" href="#divParticipacao"><i class="fa fa-user" aria-hidden="true"></i> Participar dos IRL's </a></li>
-                            <li><a class="dropdown-item item2_drop" href="#"><i class="fa fa-comments" aria-hidden="true"></i> Falar com Suporte </a></li>
-                            <li><a class="dropdown-item item3_drop" href="#divRegras"><i class="fa fa-book" aria-hidden="true"></i> Ler Nossa Regras </a></li>
+                            <li><a class="dropdown-item item1_drop" href="#titleParticipacao"><i class="fa fa-user" aria-hidden="true"></i> Participar dos IRL's </a></li>
+                            <li><a class="dropdown-item item2_drop" href="#" data-bs-toggle="modal" data-bs-target="#modalSuporte"><i class="fa fa-comments" aria-hidden="true"></i> Falar com Suporte </a></li>
+                            <li><a class="dropdown-item item3_drop" href="#titleRegras"><i class="fa fa-book" aria-hidden="true"></i> Ler Nossa Regras </a></li>
                             <li><hr class="dropdown-divider"></li>
                             <li><a class="dropdown-item item4_drop" data-bs-toggle="modal" data-bs-target="#modalPoliticas" href="#"><i class="fa fa-info-circle" aria-hidden="true"></i> Política de Privacidade </a></li>
                         </ul>
@@ -111,7 +146,7 @@
                 </button>
               </div>
 
-              <div class="div_title">
+              <div class="div_title" id="titleParticipacao">
                 <h1 class="title_participacao">Participe dos IRL's</h1>
             </div>
 
@@ -200,7 +235,7 @@
                   </form>
             </div>
 
-            <div class="div_regras">
+            <div class="div_regras" id="titleRegras">
                 <h1 class="title_regras">Regras para participar</h1>
             </div>
 
